@@ -19,7 +19,9 @@ cp.addEventListener("keyup", function () {
         document.querySelector(".error").classList.add("no");
         document.querySelector(".error").classList.remove("yes");
 
-    } else {
+    }else if(cp.value == ""){
+        document.querySelector(".error").innerHTML = "";
+    }else {
         document.querySelector(".error").innerHTML = "Valide";
         document.querySelector(".error").classList.add("yes");
         document.querySelector(".error").classList.remove("no");
@@ -38,6 +40,8 @@ document.querySelector(".ajout").addEventListener("click", (event) => {
 
 if (!isCPFR(cp.value)) {
     document.querySelector(".error").innerHTML = "Code postal non valide";
+    document.querySelector(".error").classList.add("no");
+    document.querySelector(".error").classList.remove("yes");
     event.preventDefault();
 
 }else{
@@ -45,3 +49,6 @@ if (!isCPFR(cp.value)) {
 }
 });
 
+function supp(param) {
+    return confirm("Etes vous sûr de vouloir supprimer le logement " + param + "?");
+}

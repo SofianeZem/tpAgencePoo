@@ -23,6 +23,12 @@ if (isset($_GET["action"])) {
         case $_GET["action"] === 'details':
             $controller->detail();
             break;
+        case $_GET["action"] === 'edit':
+            $controller->edit();
+            break;
+        case $_GET["action"] === 'delete':
+            $controller->erase();
+            break;
 
         default:
             $controller->findAll();

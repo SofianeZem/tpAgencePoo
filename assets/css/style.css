@@ -19,11 +19,23 @@
     border: 1px solid #f5c6cb;
 }
 
+.error{
+    position: absolute;
+    right: -15%;
+    bottom: -222%;
+}
+
 .no{
     color: red;
+    position: absolute;
+    right: -15%;
+    bottom: -222%;
 }
 .yes{
-    color: rgb(73, 205, 68);
+    color: rgb(64, 163, 60);
+    position: absolute;
+    right: -7%;
+    bottom: -222%;
 }
 
 body {
@@ -63,25 +75,27 @@ a {
     border: solid 3px;
 }
 
-.formClassic div.saisie {
+.formClassic div {
     margin: 3em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
 }
-.formClassic div.saisie {
+.formClassic div.saisieBis {
+    position: relative;
     margin: 3em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
 }
 
-.formClassic div.saisie input {
+
+.formClassic div input {
     width: 50%;
     font-style: italic;
 }
 
-.formClassic div.saisie label {
+.formClassic div label {
     width: 50%;
     margin-left: 60%;
     font-weight: bold;
@@ -134,7 +148,7 @@ div.containerList {
 .link{
     background: black;
     border-radius: 1em;
-    padding: .3em;
+    padding: .3em 1.6em .3em 1.2em;
     color: white;
     display: block;
     width: 30%;
@@ -152,6 +166,7 @@ div.containerList {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
 }
 
@@ -161,4 +176,8 @@ p.none{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.actions{
+    display: flex;
 }
